@@ -1,0 +1,12 @@
+<h1>Login</h1>
+
+<h1> <%= if(@user) then @user.name else "none" end %> logged in.</h1>
+
+<%= form_tag '/', method: :post do %>
+    <%= text_field_tag "name" %>
+    <%= submit_tag "Login" %>
+<% end %>
+
+<%= form_tag '/logout', method: :post do %>
+    <%= submit_tag "Logout" %>
+<% end %>
